@@ -35,7 +35,7 @@
     "@types/sanitize-html": "^2.16.0",
     "@unocss/preset-attributify": "^66.3.3",
     "@unocss/reset": "^66.3.3",
-    "@unocss/transformer-directives": "^66.3.3",
+    "@unocss/transformer-directives": "^66.5.0",
     "bumpp": "^10.2.0",
     "changelogen": "^0.6.2",
     "consola": "^3.4.2",
