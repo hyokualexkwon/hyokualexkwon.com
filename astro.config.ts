@@ -16,7 +16,6 @@ export default defineConfig({
   base: '/',
   vite: {
     plugins: [
-      // eslint-disable-next-line ts/ban-ts-comment
       // @ts-ignore
       devtoolsJson(),
     ],

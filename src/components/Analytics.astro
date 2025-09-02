@@ -1,6 +1,7 @@
 ---
 import GoogleAnalytics from '~/components/analytics/GoogleAnalytics.astro'
 import UmamiAnalytics from '~/components/analytics/UmamiAnalytics.astro'
+import PostHog from '~/components/posthog.astro'
 import { themeConfig } from '~/.config'
 
 const PUBLIC_GOOGLE_ANALYTICS_ID = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID
@@ -8,7 +9,12 @@ const googleAnalyticsId = themeConfig.analytics.googleAnalyticsId || PUBLIC_GOOG
 
 const PUBLIC_UMAMI_ANALYTICS_ID = import.meta.env.PUBLIC_UMAMI_ANALYTICS_ID
 const umamiAnalyticsId = themeConfig.analytics.umamiAnalyticsId || PUBLIC_UMAMI_ANALYTICS_ID
+
+// Only activate PostHog in production environment
+const isProduction = import.meta.env.MODE === 'production'
 ---
 
 {googleAnalyticsId && <GoogleAnalytics id={googleAnalyticsId} />}
 {umamiAnalyticsId && <UmamiAnalytics id={umamiAnalyticsId} />}
+{isProduction && <PostHog />}
+
