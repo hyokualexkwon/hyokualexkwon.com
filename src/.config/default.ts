@@ -6,7 +6,7 @@ import type { ThemeConfig } from '~/types'
 export const defaultConfig: ThemeConfig = {
   site: {
     title: 'H. Alex Kwon',
-    subtitle: 'Thoughs and records',
+    subtitle: 'Thoughts and records',
     author: 'Hyoku Alex Kwon',
     description: 'Rediscory the beauty of typography',
     website: 'https://hyokualexkwon.com/',
